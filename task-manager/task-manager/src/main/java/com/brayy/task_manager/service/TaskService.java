@@ -41,4 +41,8 @@ public class TaskService {
     public List<Task> getByStatus(Task.Status status) {
         return taskRepository.findByStatus(status);
     }
+    
+    public List<Task> getByPriority(Task.Priority priority) {
+        return taskRepository.findByPriority(priority);
+    }
 }

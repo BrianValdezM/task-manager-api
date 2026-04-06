@@ -46,4 +46,9 @@ public class TaskController {
     public List<Task> getByStatus(@PathVariable Task.Status status) {
         return taskService.getByStatus(status);
     }
+    
+    @GetMapping("/priority/{priority}")
+    public List<Task> getByPriority(@PathVariable Task.Priority priority) {
+        return taskService.getByPriority(priority);
+    }
 }
