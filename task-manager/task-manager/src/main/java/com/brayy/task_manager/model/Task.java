@@ -24,9 +24,13 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     private Priority priority = Priority.MEDIUM;
+    
+    @Enumerated(EnumType.STRING)
+    private Type type = Type.Internet;
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public enum Status { PENDING, IN_PROGRESS, DONE }
     public enum Priority { LOW, MEDIUM, HIGH }
+    public enum Type { Internet, Aplicacion, Computadora }
 }

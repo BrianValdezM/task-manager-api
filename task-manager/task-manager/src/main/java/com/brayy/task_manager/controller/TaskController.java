@@ -51,4 +51,9 @@ public class TaskController {
     public List<Task> getByPriority(@PathVariable Task.Priority priority) {
         return taskService.getByPriority(priority);
     }
+    
+    @GetMapping("/type/{type}")
+    public List<Task> getByType(@PathVariable Task.Type type) {
+        return taskService.getByType(type);
+    }
 }

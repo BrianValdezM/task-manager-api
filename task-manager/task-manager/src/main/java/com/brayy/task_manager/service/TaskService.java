@@ -31,6 +31,7 @@ public class TaskService {
         task.setDescription(updatedTask.getDescription());
         task.setStatus(updatedTask.getStatus());
         task.setPriority(updatedTask.getPriority());
+        task.setType(updatedTask.getType());
         return taskRepository.save(task);
     }
 
@@ -44,5 +45,9 @@ public class TaskService {
     
     public List<Task> getByPriority(Task.Priority priority) {
         return taskRepository.findByPriority(priority);
+    }
+    
+    public List<Task> getByType(Task.Type type) {
+        return taskRepository.findByType(type);
     }
 }

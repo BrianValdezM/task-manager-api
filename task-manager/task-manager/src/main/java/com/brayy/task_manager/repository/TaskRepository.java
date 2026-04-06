@@ -7,4 +7,5 @@ import java.util.List;
 public interface TaskRepository extends JpaRepository<Task, Long> {
     List<Task> findByStatus(Task.Status status);
     List<Task> findByPriority(Task.Priority priority);
+    List<Task> findByType(Task.Type type);
 }
